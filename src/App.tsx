@@ -26,7 +26,7 @@ function App() {
         alt=""
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-none"
       />
-      <div className="relative p-6 bg-white shadow-md ring-1 ring-gray-900/5 mx-4 sm:max-w-lg sm:mx-auto sm:rounded-lg my-4 sm:my-8 divide-y divide-gray-200">
+      <div className="relative p-4 sm:p-6 bg-white shadow-md ring-1 ring-gray-900/5 mx-4 sm:max-w-lg sm:mx-auto sm:rounded-lg my-4 sm:my-8 divide-y divide-gray-200">
         <Form />
         <Result />
       </div>
