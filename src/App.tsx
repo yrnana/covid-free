@@ -163,13 +163,27 @@ function Result() {
 
   return (
     <div className="mt-6 pt-6">
-      <h2 className="text-lg font-semibold mb-4">격리해제일</h2>
+      <h2 className="text-lg font-semibold">격리해제일</h2>
+      <p className="text-sm text-gray-400 mb-4">
+        <span className="text-red-500 mr-2">*</span>
+        <span>증상에 따라 격리해제일이 연장될 수 있습니다.</span>
+      </p>
       {data.map((date, index) => (
-        <div key={index} className="flex space-x-2 text-sm">
-          <span className="text-gray-500 font-semibold">
+        <div key={index} className="sm:flex sm:space-x-2 mt-2 sm:mt-1 text-sm">
+          <div className="text-gray-500 font-semibold">
             {index + 1}번째 확진자 또는 동거인
-          </span>
-          <span>{date}에 격리해제</span>
+          </div>
+          <div>
+            {!housemates[index].isVaccinated &&
+            housemates[index].date !== '' ? (
+              <>
+                <div>{getFreeDay(housemates[index].date, true)} (치료종료)</div>
+                <div>{date} (격리해제)</div>
+              </>
+            ) : (
+              <div>{date}</div>
+            )}
+          </div>
         </div>
       ))}
     </div>
