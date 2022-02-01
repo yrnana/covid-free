@@ -9,6 +9,6 @@ button.custom-button {
   }
 
   svg {
-    @apply -ml-1 mr-3 text-white;
+    @apply -ml-1 mr-3 !text-white;
   }
 }

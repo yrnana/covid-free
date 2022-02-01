@@ -124,8 +124,6 @@ function Form() {
           </div>
         ))}
         <Button
-          className="rounded-full"
-          icon="plus"
           onClick={() =>
             append({
               date: format(new Date(), 'yyyy-MM-dd'),

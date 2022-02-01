@@ -26,7 +26,7 @@ export default function Button({
       className={cx('custom-button', className, color)}
     >
       {icon && <Icon name={icon} />}
-      {children}
+      <span>{children}</span>
     </button>
   );
 }
